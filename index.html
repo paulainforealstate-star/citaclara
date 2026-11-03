@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CitaClara</title>
+  <meta name="description" content="Prototipo de app de cita previa para un centro de salud de atención primaria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="bar">
+      <span class="brand">CitaClara</span>
+      <div class="bar-actions">
+        <button class="toggle" id="facil" aria-pressed="false">Modo fácil</button>
+        <button class="toggle" id="salir" hidden>Salir</button>
+      </div>
+    </header>
+    <main class="view" id="view" aria-live="polite"></main>
+    <nav class="tabs" id="tabs" aria-label="Secciones" hidden>
+      <button class="tab" data-go="inicio">Inicio</button>
+      <button class="tab" data-go="pedir">Pedir cita</button>
+      <button class="tab" data-go="mis">Mis citas</button>
+      <button class="tab" data-go="centro">Centro</button>
+    </nav>
+  </div>
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="js/services/identidad.js"></script>
+  <script src="js/services/avisos.js"></script>
+  <script src="js/services/agenda.js"></script>
+  <script src="js/services/listaEspera.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
